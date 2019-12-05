@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>About</title>
+    <link rel="icon" href="img/welcome/astraea.png">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Css -->
+    <link href="bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="plugins/Icons/et-line-font/style.css" rel="stylesheet">
+    <link href="plugins/animate.css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Preloader
+	============================================= -->
+    <div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+    <!-- Header
+	============================================= -->
+    <section class="main-header">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-nontransparent">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand" href="#"><img src="img/logo/evensmaller.png" class="img-responsive" alt="logo"></a> -->
+                </div>
+                <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                    <div class="col-md-8 col-xs-12 nav-wrap">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html" class="page-scroll">Home</a></li>
+                            <li><a href="About.html" class="page-scroll">About</a></li>
+                            <li><a href="Team.html" class="page-scroll">Team</a><li>
+                            <li><a href="Sponsor.html" class="page-scroll">Sponsor</a><li>
+                        </ul>
+                    </div>
+                    <div class="social-media hidden-xs">
+
+                        <ul class="nav navbar-nav">
+
+                            <li><a href="https://github.com/TeamAstraea"><i class="fa fa-github"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+    </section>
+
+    <!-- Welcome
+	============================================= -->
+
+  <section>
+    <h2>&nbsp;</h2>
+  </section>
+
+    <!-- Portfolio
+	============================================= -->
+    <section id="portfolio">
+        <div class="container-fluid">
+            <h2>Project Description</h2>
+            <hr class="sep">
+            <p>
+            Our team has paired with the Navy Precision Optical Interferometer (NPOI) to develop a new control system for their siderostat mirror systems.  This system will be responsible for centering a siderostat mirror and corresponding narrow angle tracking mirror to within a microarcsecond.  Each mirrors has two motors, one for each axis of motion, which will be issued voltages to precisely move the mirror a given direction.  Feedback loops provided by a camera system and optical fiber 'photon counting' device will inform each mirrror on its relative position, and the software will automatically correct for any slight deviation from center.  In addition, this software will run multiple different modes, siderial (tracking stars at the rate of Earth's rotation), geosynchronous (fixed to some point in the sky), and quadratic (where a user inputs a rate in order to track satellites or other near-earth objects).
+
+            Due to the current software and hardware at the site being 30 years old, the astronomers at the site don't know how any of the software works, and irreplacable hardware keeps breaking.  In addition, each mirror station is run by a different computer, which all have different operating systems, making any broad change to system software incredibly difficult.  In addition, since few of the parts from the original system are available commercially, the site will no longer be able to operate when the next motherboard fails.  Thus, a complete redesign of the computer and software system is necessary to prolong the life of the instrument and bring it into the modern technological era.  The annual operating cost is $400,000 regardless of whether they're observing or not, and in addition hardware replacements would cost upwards of $100,000, meaning if our team provides a working solution, we'll be saving NPOI at least $100,000 and up to $400,000 given unrecoverable site down-time.
+
+            The concept for this was orignally provided for by Jim Clark, the current director of NPOI, and can be found <a href="https://www.cefns.nau.edu/~edo/Classes/CS_Capstone/Projects/F19/Clark-NPOI-Mirror%20CControl.pdf">here</a>.
+
+            </p>
+            <h2>Requirements</h2>
+            <hr class="sep">
+            <p>
+            Due to the complexity of the system, the minimum viable product is a single-station prototype which controls a single siderostat (Sid) and narrow angle tracker (NAT) with required feedback loops.  Each mirror needs to be issued commands at no lower than 300hz, and mirror deviation cannot be higher than a microarcsecond.  The system needs to autonomously track and center a given star across the sky until the range of the mirrors runs out. Stage two of development will include a GUI through which observers can issue commands to the single-station prototype.  Stage three expands on the single-station design to a 3-station design, with 3 siderostats, 3 narrow angle trackers, and 6 total feedback loops handled by the system.  The final stage further expands on the 3-stage design to implement 10 or more, thus 10 siderostats, 10 narrow angle trackers, and 20 feedback loops handled.
+            </p>
+
+            <h2>Envisioned Solution</h2>
+            <hr class="sep">
+            <p>
+            Currently the system works, but is overwhelmingly complicated.  Multiple computers process different types of data, communicate with each other, and issue outputs, however, the PCI cards necessary for the cross-computer communication cost $500-$1000, thus costing an exorbinant amount any time a card fails.  One potential solution involves acquiring 30 PCI cards to implement a 10-station prototype, but due to costs and unreliability this seems nonviable, even though code alteration would be minor to make this solution work.  Instead, the team envisions starting from scratch, bypassing the current computer system and handling hardware input-output on one PC rather than two separate PCs.  This solution bypasses the PCI connection, thus creating a cheaper, more expandable alternative, but requiring code development from the ground up.  However, the astronomy community is quite large and much of the tracking algorithms are available for free on GitHub, thus the majority of the software development will be in utilizing motor drivers to issue commands to mirrors based on astrometric algorithms, utilizing positional offset feedback to precisely center the mirrors.  This system will be expandable to handle feedback loops from multiple stations simultaneously, allowing for individual control systems to be bypassed.  Finally, the software will have one GUI through which astronomers can issue a single command to track a given star, and have all stations respond, track the object, and give real-time feedback to observers on system status.
+            </p>
+
+            <h2>Technologies</h2>
+            <hr class="sep">
+            <p>
+            Since the current code is written in C/C++ and we may utilitze the motor drivers and other libraries necessary for the hardware interfacing, our codebase we create will also be in C/C++.  Since other computers on the network are in Linux, and the astronomers working at the site are most familiar with Linux, our system will also be on Linux.  This makes maintenance of the code and operations much easier for NPOI personnel once our capstone has completed.  Our team will be using an assortment of IDE's, including Xcode and Eclipse, and separately committing to a joint GitHub repo.  To test the software, NPOI has conveniently set up a testing rig with most of the input/output devices connected so that we may easily monitor progress of our system.
+            </p>
+
+            <h2>2019-2020 Schedule</h2>
+            <hr class="sep">
+            <center>
+            <table>
+              <tr>
+                <td>September 20</td>
+                <td>Team is Assigned Project, and gets initial exposure to problem</td>
+              </tr>
+              <tr>
+                 <td>October 1-22</td>
+                 <td>Team investigates current system, discusses technology feasibility, and decides on a solution</td>
+              </tr>
+              <tr>
+                 <td>November 1-14</td>
+                 <td>Team begins writing psuedocode and sets up hardware for the stage 1 prototype (single station)</td>
+              </tr>
+              <tr>
+                 <td>November 28</td>
+                 <td>Team begins writing code and testing it on NPOI test system</td>
+              </tr>
+              <tr>
+                 <td>February 10</td>
+                 <td>Stage 1 prototype is stable and working.  Stage 2 begins</td>
+              </tr>
+              <tr>
+                 <td>February 30</td>
+                 <td>Stage 2 prototype is stable and working.  Stage 3 begins, plan for integration is develped</td>
+              </tr>
+              <tr>
+                 <td>March 1</td>
+                 <td>Stage 3 prototype is stable and working.  Integration begins</td>
+              </tr>
+              <tr>
+                 <td>March 15</td>
+                 <td>Integration complete.  Final documentation and release notes begin</td>
+              </tr>
+              <tr>
+                 <td>April 1</td>
+                 <td>Release notes complete, codebase uploaded to NPOI wiki. System begins operation</td>
+              </tr>
+            </table>
+            </center>
+        </div>
+    </section>
+
+                </div>
+    </section>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="bootstrap-assets/js/bootstrap.min.js"></script>
+     <script src="js/custom.js"></script>
+     <!-- JS PLUGINS -->
+     <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+     <script src="js/jquery.easing.min.js"></script>
+     <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
+     <script src="plugins/countTo/jquery.countTo.js"></script>
+     <script src="plugins/inview/jquery.inview.min.js"></script>
+     <script src="plugins/Lightbox/dist/js/lightbox.min.js"></script>
+     <script src="plugins/WOW/dist/wow.min.js"></script>
+     <!-- GOOGLE MAP -->
+     <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+</body>
+
+</html>

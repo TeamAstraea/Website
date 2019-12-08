@@ -1,0 +1,4 @@
+Listen for 'change' / keyup
+filter array based on word to match
+use 'new Regexp(str, 'gi')' and str.match(regexp)
+string.replace(regexp, replacement)
